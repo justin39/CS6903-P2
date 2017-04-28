@@ -7,6 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="flash-container padding-top">
+	<% flash.each do |type, msg| %>
+	  <% cl = (type == 'notice')? 'alert-success' : 'alert-danger' %>
+	  <div class="alert <%=cl%> fade in" role="alert">
+		<button class='close' data-dismiss='alert'>&times;</button>
+		<%= msg.html_safe %>
+	  </div>
+	<% end %>
+  </div>
 
 <%= yield %>
 
