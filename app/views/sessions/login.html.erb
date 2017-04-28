@@ -16,8 +16,13 @@
 			  <label>Password: </label>
 			  <%= password_field_tag :login_password, "", class: 'form-control' %>
 			</div>
-			<%= submit_tag 'Log in', class: 'btn btn-primary' %>
+			<div class="form-group row">
+			  <%= submit_tag 'Log in', class: 'btn btn-primary' %>
+			</div>
 		  <% end %>
+			<div class="form-group row">
+		  	  <%= button_to 'Sign up', users_signup_path, method: :get, class: 'btn btn-danger' %>
+			</div>
 		</div>
 	  </div>
 	</div>
