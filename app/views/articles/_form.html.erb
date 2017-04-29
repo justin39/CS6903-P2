@@ -22,6 +22,10 @@
 	</div>
 
 	<div class="actions">
+	  <% if @article.persisted? %>
+		<%= f.submit 'Update', class: 'btn btn-success' %>
+	  <% else %>
 		<%= f.submit 'Create', class: 'btn btn-primary' %>
+	  <% end %>
 	</div>
 <% end %>

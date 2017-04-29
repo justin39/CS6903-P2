@@ -10,8 +10,7 @@ class ApplicationController < ActionController::Base
 	  @current_user = User.find(session[:user_id])
 	  return true
 	else
-	  redirect_to(controller: 'sessions', action: 'login')
-	  return false
+	  return redirect_to login_path, alert: 'Please log in before continuing'
 	end
   end
 

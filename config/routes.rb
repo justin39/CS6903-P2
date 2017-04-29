@@ -18,8 +18,9 @@ Rails.application.routes.draw do
   root 'sessions#login'
 
   get 'users/signup' => 'users#new'
-  get 'users/login' => 'sessions#login'
-  get 'users/logout' => 'sessions#logout'
+  get 'users/login' => 'sessions#login', as: 'login'
+  get 'users/logout' => 'sessions#logout', as: 'logout'
+  get 'users/signup' => 'users#new', as: 'signup'
 
   resources :articles
 

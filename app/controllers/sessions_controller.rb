@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-  before_filter :authenticate_user, only: [:profile, :setting]
   before_filter :save_login_state, only: [:login, :login_attempt]
 
   def login
@@ -19,11 +18,5 @@ class SessionsController < ApplicationController
 	else
 	  return redirect_to :back, alert: "Invalid username or password"
 	end
-  end
-
-  def profile
-  end
-
-  def setting
   end
 end
