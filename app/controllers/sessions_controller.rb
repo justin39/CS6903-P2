@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
   def logout
 	session[:user_id] = nil
-	redirect_to action: 'login', notice: 'Sucessfully signed out'
+	redirect_to action: 'login', notice: 'Successfully signed out'
   end
 
   def login_attempt
