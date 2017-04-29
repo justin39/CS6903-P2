@@ -13,6 +13,7 @@ class SessionsController < ApplicationController
   def login_attempt
 	authorized_user = User.authenticate(params[:username], params[:login_password])
 	if authorized_user
+	  reset_session
 	  session[:user_id] = authorized_user.id
 	  return redirect_to articles_path, notice: "Successfully logged in as #{authorized_user.username}"
 	else
