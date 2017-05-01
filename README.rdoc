@@ -1,28 +1,24 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
 
-Things you may want to cover:
+This repo contains the project files for Applied Cryptography's Project 2 by Justin Wang and Zhen Tang. The files implement a basic demo of a blog with some security measures in Ruby on Rails. A SSL certificate is required to showcase TLS/SSL functionality.
 
-* Ruby version
+## Setup
 
-* System dependencies
+Install gems from Gemfile:
+```
+bundle install
+```
 
-* Configuration
+Create db with standard rake commands (Rails <5):
+```
+rake db:create db:migrate
+```
 
-* Database creation
+Start the server using
+```
+thin start --ssl --ssl-key-file [key] --ssl-cert-file [cert]
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+For local usage, generate a self-signed certificate and add the CA to the browser.
