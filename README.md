@@ -1,10 +1,10 @@
-== README
+# README
 
-== Overview
+## Overview
 
 This repo contains the project files for Applied Cryptography's Project 2 by Justin Wang and Zhen Tang. The files implement a basic demo of a blog with some security measures in Ruby on Rails. A SSL certificate is required to showcase TLS/SSL functionality.
 
-== Setup
+## Setup
 
 Install gems from Gemfile:
 ```
