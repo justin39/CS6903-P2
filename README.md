@@ -23,4 +23,4 @@ Start the server using
 thin start --ssl --ssl-key-file [key] --ssl-cert-file [cert]
 ```
 
-For local usage, generate a self-signed certificate and add the CA to the browser.
+For local usage, generate a self-signed certificate and add the CA to the browser. The website will be available at `https://localhost:3000` by default.
